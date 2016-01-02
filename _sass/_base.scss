@@ -11,30 +11,78 @@
   background-color: $components-menu-color;
   display: flex;
   align-items: space-between;
+  flex-wrap: wrap;
 }
 .component-logo {
   background-image: url("/images/components.png");
-  position: absolute;
+  background-repeat: no-repeat;
   height: 34px;
   width: 23px;
+  margin-left: 40px;
+  margin-top: 30px;
 }
-.top-nav-container {
-  width: 1000%;
+.nav-container {
+  width: 100%;
   height: 64px;
 }
-.top-nav-wrap {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
+.top-nav {
+  &-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-item {
+    padding: 15px;
+  }
+  &-text {
+    color: #fff;
+    text-transform: uppercase;
+  }
+  &-spacing {  
+    flex-grow: 10;
+  }
 }
-.top-nav-text {
+
+.download-section-wrap {
+  background-color: lightgrey;
+  height: 84px;
+  width: 100%;
   color: #fff;
-  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.top-nav-item {
-  padding: 15px;
-
+.footer {
+  &-container {
+    background-color: grey;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  &-wrap {
+    width: 140px;
+  }
+  &-text-wrap {
+    width: 140px;
+    height: 92px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
-.top-nav-spacing {
-
+.social {
+  &-logo-wrap {
+    height: 92px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  &-icon-1, 
+  &-icon-2,
+  &-icon-3 {
+    background-color: #fff;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+  }
 }
