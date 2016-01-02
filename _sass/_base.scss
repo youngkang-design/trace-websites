@@ -1,1 +1,40 @@
-@import "reset";
+@import "reset",
+        "colors";
+
+* {
+  font-family: sans-serif;
+  font-size: 14px;
+}
+.header-wrap {
+  width: 100%;
+  height: 144px;
+  background-color: $components-menu-color;
+  display: flex;
+  align-items: space-between;
+}
+.component-logo {
+  background-image: url("/images/components.png");
+  position: absolute;
+  height: 34px;
+  width: 23px;
+}
+.top-nav-container {
+  width: 1000%;
+  height: 64px;
+}
+.top-nav-wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.top-nav-text {
+  color: #fff;
+  text-transform: uppercase;
+}
+.top-nav-item {
+  padding: 15px;
+
+}
+.top-nav-spacing {
+
+}
