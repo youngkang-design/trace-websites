@@ -17,6 +17,48 @@
   top: 32px;
   left: 40px;
 }
+.comp {
+  &-badges {
+    background-image: url("../images/comp_badges.png");
+  }
+  &-buttons {
+    background-image: url("../images/comp_buttons.png");
+  }
+  &-cards {
+    background-image: url("../images/comp_cards.png");
+  }
+  &-dialogs {
+    background-image: url("../images/comp_dialogs.png");
+  }  
+  &-layout {
+    background-image: url("../images/comp_layout.png");
+  }
+  &-loading {
+    background-image: url("../images/comp_loading.png");
+  }
+  &-menus {
+    background-image: url("../images/comp_menus.png");
+  }
+  &-sliders {
+    background-image: url("../images/comp_sliders.png");
+  }
+  &-snackbar {
+    background-image: url("../images/comp_snackbar.png");
+  }
+  &-toggles {
+    background-image: url("../images/comp_toggles.png");
+  }
+  &-tables {
+    background-image: url("../images/comp_tables.png");
+  }
+  &-textfields {
+    background-image: url("../images/comp_textfields.png");
+  }
+  &-tooltips {
+    background-image: url("../images/comp_tooltips.png");
+  }
+
+}
 .nav-container {
   width: 100%;
   height: 64px;
