@@ -111,5 +111,16 @@
     width: 36px;
     height: 36px;
     border-radius: 50%;
+  &-icon-1 {
+    background: url("../images/post_twitter_white_24dp.png") no-repeat top left;
+    background-size: contain;
   }
+  &-icon-2 {
+    background: url("../images/github_white_24.svg") no-repeat top left;
+    background-size: contain;
+  }
+  &-icon-3 {
+    background: url("../images/post_gplus_white_24dp.png") no-repeat top left;
+    background-size: contain;
+  }  
 }
