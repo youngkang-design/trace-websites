@@ -84,7 +84,6 @@
 
 .main-layout {
   display: flex;
-  padding: 64px 36px;
 }
 
 .side-nav {
@@ -98,9 +97,10 @@
   &-icons {
     width: 46px;
     height: 46px;
-    background-color: #333;
     border-radius: 50%;
     margin: 10px 0;
+    background-size: 46px;
+    background-repeat: no-repeat;
   }
   &-name {
 
@@ -108,22 +108,28 @@
 }
 
 .section-layout {
-
+  background-color: #fafafa;
+  color: #757575;
 }
 
 .download-section-wrap {
-  background-color: lightgrey;
+  background-color: #424242;
   height: 84px;
   width: 100%;
-  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
+  a {
+    color: #fafafa;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
 }
 .footer {
   &-container {
-    background-color: grey;
-    height: 200px;
+    background-color: #212121;
+    height: 188px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -137,11 +143,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 12px;
+    a {
+      color: #757575;
+    }
   }
 }
 .social {
   &-logo-wrap {
-    height: 92px;
+    height: 76px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -149,10 +159,9 @@
   &-icon-1, 
   &-icon-2,
   &-icon-3 {
-    background-color: #fff;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+  }
   &-icon-1 {
     background: url("../images/post_twitter_white_24dp.png") no-repeat top left;
     background-size: contain;
