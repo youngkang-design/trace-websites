@@ -61,8 +61,14 @@
 }
 .nav-container {
   width: 100%;
-  height: 64px;
+  height: 56px;
   align-self: flex-end;
+}
+.material-icons {
+  line-height: 0.6;
+  margin-right: 8px;
+  color: white;
+  opacity: 0.65;
 }
 .top-nav {
   &-wrap {
@@ -74,42 +80,98 @@
     padding: 15px;
   }
   &-text {
-    color: #fff;
+    color: white;
+    opacity: 0.65;
     text-transform: uppercase;
+    font-weight: 500;
+    font-size: 13px;
+  }
+  &-selected {
+    opacity: 1;
+    border-bottom: 3px solid #18ffff;
+    padding-bottom: 25px;
   }
   &-spacing {  
     flex-grow: 10;
   }
+  &-link-wrap {
+    display: flex;
+  }
+  &-link-text {
+    color: white;
+    opacity: 0.65;
+    font-weight: 500;
+    font-size: 13px;
+  }
 }
 
-.main-layout {
-  display: flex;
+a.top-nav-link-text:hover {
+  opacity: 1; //FIXME: must apply hover event style on top-nav
+}
+
+.main {
+  &-layout {
+    display: flex;
+  }
 }
 
 .side-nav {
   display: flex;
   width: 200px;
   flex-wrap: wrap;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
+  z-index: 1;
+  padding: 34px 20px 190px;
   &-item {
     display: flex;
     align-items: center;
+    margin: 10px;
   }
   &-icons {
     width: 46px;
     height: 46px;
-    border-radius: 50%;
-    margin: 10px 0;
+    margin: 0 16px 0 0;
     background-size: 46px;
     background-repeat: no-repeat;
   }
   &-name {
-
+    width: 84px;
+    color: rgba(0,0,0,.66);
   }
 }
 
-.section-layout {
-  background-color: #fafafa;
-  color: #757575;
+.section {
+  &-layout {
+    background-color: #fafafa;
+    color: #757575;
+    position: relative;
+  }
+  &-flex-wrap {
+    display: flex;
+    margin: 90px 40px 48px;
+  }
+  &-header-wrap {
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-right: 40px;
+    line-height: 2em;
+  }
+  &-paragraph-wrap {
+    line-height: 2em;
+    font-size: 13px;
+    a {
+      color: #ff4081;
+      font-weight: 500;
+    }
+  }
+  &-image {
+    position: absolute;
+    background: url("../images/compindex_2x.png") no-repeat top left;
+    height: 90%;
+    width: 90%;
+    left: 40px;
+    background-size: 100%;
+  }
 }
 
 .download-section-wrap {
@@ -144,6 +206,7 @@
     justify-content: space-between;
     align-items: center;
     font-size: 12px;
+    font-weight: 500;
     a {
       color: #757575;
     }
