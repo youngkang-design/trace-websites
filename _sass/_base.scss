@@ -1,91 +1,95 @@
 @import "reset",
         "colors";
 
-.header-wrap {
-  width: 100%;
-  height: 144px;
+.header__wrap {
   background-color: $components-menu-color;
-  display: flex;
-  flex-wrap: wrap;
+  overflow: hidden;
 }
 
-.nav-container {
-  width: 100%;
-  height: 56px;
-  align-self: flex-end;
+.nav__container {
+  &:before {
+    background-image: url("../images/components.png");
+    background-repeat: no-repeat;
+    height: 34px;
+    width: 23px;
+    margin: 32px 0 0 36px;
+    display: block;
+    content: '';
+  }
+  display: flex;
+  flex-flow: column nowrap;
 }
 .material-icons {
   line-height: 0.6;
   margin-right: 8px;
-  color: white;
-  opacity: 0.65;
 }
 .top-nav {
-  &-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin: 23px 20px 0;
+  &__menu {
     display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
   }
-  &-item {
-    padding: 15px;
-  }
-  &-text {
+  &__item {
+    padding: 17px 16px;
+    display: flex;
     color: white;
     opacity: 0.65;
+  }
+  &__text {
     text-transform: uppercase;
     font-weight: 500;
     font-size: 13px;
   }
-  &-selected {
+  &__selected {
     opacity: 1;
     border-bottom: 3px solid #18ffff;
-    padding-bottom: 25px;
+    padding-bottom: 23px;
   }
-  &-spacing {  
-    flex-grow: 10;
+  &__spacing {  
+    flex-grow: 1;
   }
-  &-link-wrap {
-    display: flex;
-  }
-  &-link-text {
-    color: white;
-    opacity: 0.65;
+  &__link__text {
     font-weight: 500;
     font-size: 13px;
   }
+  &__link__wrap {
+    display: flex;
+  }
 }
 
-a.top-nav-link-text:hover {
+a.top-nav__item:hover {
   opacity: 1; //FIXME: must apply hover event style on top-nav
 }
 
 .main {
-  &-layout {
+  &__layout {
     display: flex;
   }
 }
 
 .side-nav {
-  display: flex;
-  width: 200px;
-  flex-wrap: wrap;
   box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
   z-index: 1;
-  padding: 34px 20px 190px;
-  &-item {
+  &__item {
     display: flex;
     align-items: center;
-    margin: 10px;
+    margin: 20px 39px 0 32px;
+    &:first-child {
+      margin-top: 42px;
+    }
+    &:last-child {
+      margin-bottom: 200px;
+    }
   }
-  &-icons {
+  &__icons {
     width: 46px;
     height: 46px;
-    margin: 0 16px 0 0;
     background-size: 46px;
     background-repeat: no-repeat;
   }
-  &-name {
-    width: 84px;
+  &__name {
+    margin-left: 16px;
     color: rgba(0,0,0,.66);
   }
 }
@@ -132,40 +136,45 @@ a.top-nav-link-text:hover {
 }
 
 .section {
-  &-layout {
+  &__wrap {
+    &:after {
+      position: absolute;
+      display: block;
+      background: url("../images/compindex_2x.png") no-repeat top left;
+      height: 100%;
+      width: 75%;
+      background-size: 100%;
+      content: '';
+      margin-left: 40px;
+    }
+  }
+  &__layout {
     background-color: #fafafa;
     color: #757575;
-    position: relative;
+    flex-grow: 1;
   }
-  &-flex-wrap {
+  &__flex-wrap {
     display: flex;
     margin: 90px 40px 48px;
   }
-  &-header-wrap {
+  &__header-wrap {
     font-weight: 700;
     text-transform: uppercase;
     padding-right: 40px;
     line-height: 2em;
   }
-  &-paragraph-wrap {
+  &__paragraph-wrap {
     line-height: 2em;
     font-size: 13px;
+    width: 700px;
     a {
       color: #ff4081;
       font-weight: 500;
     }
   }
-  &-image {
-    position: absolute;
-    background: url("../images/compindex_2x.png") no-repeat top left;
-    height: 90%;
-    width: 90%;
-    left: 40px;
-    background-size: 100%;
-  }
 }
 
-.download-section-wrap {
+.download-section__wrap {
   background-color: #424242;
   height: 84px;
   width: 100%;
@@ -180,17 +189,17 @@ a.top-nav-link-text:hover {
   }
 }
 .footer {
-  &-container {
+  &__container {
     background-color: #212121;
     height: 188px;
     width: 100%;
     display: flex;
     justify-content: center;
   }
-  &-wrap {
+  &__wrap {
     width: 140px;
   }
-  &-text-wrap {
+  &__text-wrap {
     width: 140px;
     height: 92px;
     display: flex;
@@ -202,14 +211,14 @@ a.top-nav-link-text:hover {
       color: #757575;
     }
   }
-}
-.social {
-  &-logo-wrap {
+  &__social-logos {
     height: 76px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
   }
+}
+.social {
   &-icon-1, 
   &-icon-2,
   &-icon-3 {
