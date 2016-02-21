@@ -40,6 +40,7 @@
     text-transform: uppercase;
     font-weight: 500;
     font-size: 13px;
+    white-space: nowrap;
   }
   &__selected {
     opacity: 1;
@@ -136,18 +137,6 @@ a.top-nav__item:hover {
 }
 
 .section {
-  &__wrap {
-    &:after {
-      position: absolute;
-      display: block;
-      background: url("../images/compindex_2x.png") no-repeat top left;
-      height: 100%;
-      width: 75%;
-      background-size: 100%;
-      content: '';
-      margin-left: 40px;
-    }
-  }
   &__layout {
     background-color: #fafafa;
     color: #757575;
@@ -171,6 +160,11 @@ a.top-nav__item:hover {
       color: #ff4081;
       font-weight: 500;
     }
+  }
+  &__img {
+    width: 90%;
+    background-size: 100%;
+    margin-left: 40px;
   }
 }
 
